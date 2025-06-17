@@ -54,14 +54,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@maarifahlabs.com',
+      details: 'contact@maarifahlabs.com',
       description: 'Send us an email anytime'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 5pm'
+      details: '+91 7275124223',
+      description: 'Mon-Sat from 8am to 5pm'
     },
     {
       icon: MapPin,

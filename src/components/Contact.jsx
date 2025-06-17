@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Clock, MessageSquare, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,9 +14,11 @@ const Contact = () => {
     service: '',
     message: ''
   });
-
-  const handleSubmit = (e) => {
+  const scriptURL='https://script.google.com/macros/s/AKfycbwUv7Kj0n4MTh4eVQjRYi0ZJD7-KNP8ZOxtoOdRKafv29kXumdrjXNylHJM9hpVXOE/exec'
+  const handleSubmit =async (e) => {
     e.preventDefault();
+    
+    setIsSubmitting(true);
     
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
@@ -24,14 +27,34 @@ const Contact = () => {
         description: "Please fill in all required fields.",
         variant: "destructive"
       });
+      setIsSubmitting(false);
       return;
     }
-
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("message", formData.message);
+    form.append("company", formData.company || "");
+    form.append("service", formData.service || "");
+    console.log('form data:---',form)
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: form // ✅ NO JSON — just FormData
+      });
+  
+      
+    } catch (err) {
+      alert("Submission failed: " + err.message);
+    }
+ 
     // Simulate form submission
     toast({
       title: "Message Sent!",
       description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
     });
+
+    setIsSubmitting(false);
 
     // Reset form
     setFormData({
@@ -175,11 +198,28 @@ const Contact = () => {
               <Button 
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50"
               >
-                Send Message
-                <Send className="ml-2 h-5 w-5" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="ml-2 h-5 w-5" />
+                  </>
+                )}
               </Button>
+              
+              {/* {isSubmitting && (
+                <div className="flex items-center justify-center space-x-2 text-blue-400">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  <span className="text-sm">Processing your message...</span>
+                </div>
+              )} */}
             </form>
           </motion.div>
 

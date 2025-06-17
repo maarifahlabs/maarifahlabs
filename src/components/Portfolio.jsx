@@ -10,42 +10,42 @@ const Portfolio = () => {
       category: 'Web Development',
       description: 'A modern e-commerce platform with advanced features including real-time inventory, payment processing, and analytics dashboard.',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'Modern e-commerce platform interface with shopping cart and product catalog'
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d'
     },
     {
       title: 'Healthcare Mobile App',
       category: 'Mobile Development',
       description: 'Cross-platform mobile application for healthcare management with appointment scheduling and telemedicine features.',
       tech: ['React Native', 'Firebase', 'WebRTC', 'Redux'],
-      image: 'Healthcare mobile app interface showing appointment booking and patient dashboard'
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56'
     },
     {
       title: 'AI-Powered Analytics',
       category: 'AI & ML',
       description: 'Machine learning solution for predictive analytics and business intelligence with real-time data processing.',
       tech: ['Python', 'TensorFlow', 'AWS', 'Docker'],
-      image: 'AI analytics dashboard with charts, graphs and machine learning insights'
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71'
     },
     {
       title: 'Financial Dashboard',
       category: 'Web Development',
       description: 'Comprehensive financial management dashboard with real-time market data and portfolio tracking.',
       tech: ['Vue.js', 'Express', 'PostgreSQL', 'Chart.js'],
-      image: 'Financial dashboard showing stock charts, portfolio performance and market data'
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3'
     },
     {
       title: 'Smart IoT Solution',
       category: 'IoT & AI',
       description: 'IoT platform with AI-driven automation for smart home and office management systems.',
       tech: ['React', 'MQTT', 'InfluxDB', 'TensorFlow'],
-      image: 'Smart home IoT control panel with device monitoring and automation settings'
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64'
     },
     {
       title: 'Social Media Platform',
       category: 'Full Stack',
       description: 'Social networking platform with real-time messaging, content sharing, and community features.',
       tech: ['Next.js', 'GraphQL', 'Prisma', 'Socket.io'],
-      image: 'Social media platform interface with news feed, messaging and user profiles'
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113'
     }
   ];
 
@@ -80,7 +80,7 @@ const Portfolio = () => {
                 <img  
                   alt={`${project.title} - ${project.description}`}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                 src="https://images.unsplash.com/photo-1595872018818-97555653a011" />
+                 src={project.image} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4 flex space-x-2">
                     <Button size="sm" variant="secondary" className="flex-1">

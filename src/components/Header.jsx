@@ -18,10 +18,9 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Portfolio', href: '#portfolio' }, 
     { name: 'Blogs', href: '#blog' },
+    { name: 'About', href: '#about' },
   ];
 
   return (
@@ -55,7 +54,14 @@ const Header = () => {
               </motion.a>
             ))}
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-              Get Started
+              <motion.a
+                key={'Contact'}
+                href={'#contact'}
+                whileHover={{ scale: 1.1 }}
+              >
+                {'Contact Us'}
+              </motion.a>
+              
             </Button>
           </div>
 
@@ -86,7 +92,14 @@ const Header = () => {
               </a>
             ))}
             <Button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600">
-              Get Started
+              <motion.a
+                key={'Contact'}
+                href={'#contact'}
+                whileHover={{ scale: 1.1 }}
+              >
+                {'Contact Us'}
+              </motion.a>
+              
             </Button>
           </motion.div>
         )}

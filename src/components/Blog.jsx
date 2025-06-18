@@ -110,7 +110,9 @@ const Blog = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Link to='/blogs'>
+          <Link
+           onClick={() => window.scrollTo(0, 0)}
+           to='/blogs'>
           <Button 
              
             size="lg"

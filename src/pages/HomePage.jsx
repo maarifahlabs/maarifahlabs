@@ -18,8 +18,8 @@ function HomePage() {
         <Hero />
         <Services />
         <Portfolio />
-        <About />
         <Blog />
+        <About />
         <Contact />
       </main>
       <Footer />

@@ -45,7 +45,7 @@ const Blog = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="gradient-text">Blogs</span>
+            Latest <span className="gradient-text">Blogs</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           {/* From idea to impact — dive into the stories behind our most transformative projects. */}

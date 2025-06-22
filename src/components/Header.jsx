@@ -17,10 +17,10 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' }, 
-    { name: 'Blogs', href: '#blog' },
-    { name: 'About', href: '#about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Portfolio', href: '/#portfolio' }, 
+    { name: 'Blogs', href: '/#blog' },
+    { name: 'About', href: '/#about' },
   ];
 
   return (

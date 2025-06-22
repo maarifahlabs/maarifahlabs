@@ -84,7 +84,7 @@ const Contact = () => {
       icon: Phone,
       title: 'Call Us',
       details: '+91 7275124223',
-      description: 'Mon-Sat from 8am to 5pm'
+      description: 'Mon-Fri from 10am to 6pm IST'
     },
     {
       icon: MapPin,

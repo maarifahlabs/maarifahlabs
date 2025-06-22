@@ -96,7 +96,7 @@ const BlogPage = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="gradient-text">Blogs</span>
+              Latest <span className="gradient-text">Blogs</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Insights, tutorials, and thoughts on the latest in technology, development, and innovation.
@@ -104,7 +104,7 @@ const BlogPage = () => {
           </motion.div>
 
           {/* Search and Filter */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -136,9 +136,9 @@ const BlogPage = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
-      </section>
+      </section> 
 
       {/* Blog Grid */}
       <section className="py-20">
@@ -224,7 +224,7 @@ const BlogPage = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900">
+      {/* <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -252,7 +252,7 @@ const BlogPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
     <Footer />
     </>

@@ -64,7 +64,7 @@ const Hero = () => {
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             Transform Your
-            <span className="gradient-text block">Digital Vision</span>
+            <span className="gradient-text block leading-tight">Digital Vision</span>
             Into Reality
           </motion.h1>
 
